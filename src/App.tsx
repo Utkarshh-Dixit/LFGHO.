@@ -5,7 +5,7 @@ function App() {
     <div className="App">
       <h1>lfgho</h1>
     </div>
-  );
+  )
 }
 
 export default App;
