@@ -1,4 +1,4 @@
-import react from 'react';
+//import react from 'react';
 import { ConnectKitButton } from 'connectkit';
 
 function ConnectWallet() {
