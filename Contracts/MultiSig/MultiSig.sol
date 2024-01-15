@@ -22,7 +22,7 @@ contract MultiSig {
         require(
             _numConfirmedReq > 0 && _numConfirmedReq <= _owners.length,
             "Invalid number of confirmations required"
-        );
+        );  
         for (uint256 i = 0; i < _owners.length; i++) {
             require(_owners[i] != address(0), "Invalid Owner");
             owners.push(_owners[i]);
