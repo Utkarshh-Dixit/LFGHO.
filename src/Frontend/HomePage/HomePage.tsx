@@ -1,5 +1,8 @@
 import React from 'react';
 import Navbar from '../Navbar/Navbar';
+import file from '../images/file.png';
+import repayment from '../images/repayment.png';
+import wallet from '../images/wallet.png';
 import './HomePage.css'
 
 const HomePage: React.FC = () => {
@@ -12,22 +15,23 @@ const HomePage: React.FC = () => {
       <button className='home-button'>Connect Wallet</button>
       <div className="cards-container">
           <div className="card">
-            <img src="path-to-your-image.jpg" alt="Description" />
+            <img src={wallet} alt="Description" />
             <h2>Your Balance</h2>
             <p>View your current balance</p>
           </div>
           <div className="card">
-            <img src="path-to-your-image.jpg" alt="Description" />
+            <img src={file} alt="Description" />
             <h2>Transaction History</h2>
             <p>Track your past transactions</p>
           </div>
           <div className="card">
-            <img src="path-to-your-image.jpg" alt="Description" />
+            <img src={repayment} alt="Description" />
             <h2>Repayment</h2>
-            <p>Description for card 3</p>
+            <p>Make the repayment here</p>
           </div>
         </div>
       </div>
+      {/* Add more content here */}
     </div>
   );
 };
