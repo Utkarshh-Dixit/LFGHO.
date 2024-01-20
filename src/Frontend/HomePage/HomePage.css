@@ -1,81 +1,85 @@
 body {
-    margin: 0;
-    padding: 0;
-    background: linear-gradient(to right, #e22ed9, #13a0d8);
-    color: #333; 
-    font-family: Arial, sans-serif;
-  }
-  
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to right, #e22ed9, #13a0d8); /* Example gradient */
+  color: #333; /* Adjust text color as needed */
+  font-family: Arial, sans-serif; /* Your preferred font */
+}
+
 
 .centered-content h1 {
-    text-align: center;
-    margin-bottom: 1rem;
-  }
-  
-  .centered-content p {
-    text-align: center;
-    max-width: 600px; 
-    margin: 0 auto; /* Centers the paragraph in the div */
-  }
-  
-  .centered-content button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px 20px;
-    font-size: 16px;
-    margin: 20px auto;
-    background-color: #007bff; 
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .centered-content button:hover {
-    background-color: #0056b3;
-  }
-  
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem; /* Adds space below the heading */
+}
+
+.centered-content p {
+  text-align: center;
+  max-width: 600px; /* Optional: constrains the width of the paragraph for readability */
+  margin: 0 auto; /* Centers the paragraph in the div */
+}
+
+.card img{
+  max-height: 50px;
+}
+
+.centered-content button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+  font-size: 16px;
+  margin: 20px auto;
+  background-color: #007bff; /* Adjust the color to your preference */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.centered-content button:hover {
+  background-color: #0056b3; /* Adjust the hover color to your preference */
+}
+
+.cards-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Spacing between cards */
+  margin-top: 20px; /* Space above the cards */
+}
+.card {
+  width: 300px; /* Adjust the width as needed */
+  text-align: center; /* Centers the content inside each card */
+  padding: 15px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); /* Original shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for transform and shadow */
+}
+.card:hover {
+  cursor: grab; /* Replace with the path to your cursor image */
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.3);
+}
+
+
+
+.card img {
+  max-width: 100%; /* Ensures the image scales with the card */
+  height: auto;
+}
+
+.card h2 {
+  margin-top: 10px; /* Adjust spacing as needed */
+}
+
+.card p {
+  margin-top: 10px; /* Adjust spacing as needed */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
   .cards-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px; /* Spacing between cards */
-    margin-top: 20px; /* Space above the cards */
+    flex-direction: column;
+    align-items: center;
   }
-  .card {
-    width: 300px; 
-    text-align: center; /* Centers the content inside each card */
-    padding: 15px;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); /* Original shadow */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for transform and shadow */
-  }
-  .card:hover {
-    cursor: grab; 
-    transform: scale(1.05);
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.3);
-  }
-  
-  
-  
-  .card img {
-    max-width: 100%;
-    height: auto;
-  }
-  
-  .card h2 {
-    margin-top: 10px;
-  }
-  
-  .card p {
-    margin-top: 10px;
-  }
-  
-  /* Responsive adjustments */
-  @media (max-width: 768px) {
-    .cards-container {
-      flex-direction: column;
-      align-items: center;
-    }
-  }
-  
+}
