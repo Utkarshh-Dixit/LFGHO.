@@ -1,8 +1,8 @@
 import React from 'react';
 import './TransactionPage.css'; // CSS file for styling
-import transactionphotu from './images/transactionPhotu.png';
-import heartFac from './images/heartFac.png';
-import apyIm from './images/apyImag.png';
+import transactionphotu from '../images/transactionPhotu.png';
+import heartFac from '../images/heartFac.png';
+import apyIm from '../images/apyImag.png';
 
 const TransactionPage: React.FC = () => {
   return (

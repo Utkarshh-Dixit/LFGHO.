@@ -1,10 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
+import Popup from './Popup';
 import './RepaymentPage.css'; // CSS file for styling
-import transactionphotu from './images/transactionPhotu.png';
-import heartFac from './images/heartFac.png';
-import apyIm from './images/apyImag.png';
+import transactionphotu from '../images/transactionPhotu.png';
+import heartFac from '../images/heartFac.png';
+import apyIm from '../images/apyImag.png';
 
-const TransactionPage: React.FC = () => {
+const RepaymentPage: React.FC = () => {
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+
+  const openPopup = () => {
+    setIsPopupOpen(true);
+  };
+
+  const closePopup = () => {
+    setIsPopupOpen(false);
+  };
+
+
   return (
     <div>
       <nav className="navbar">
@@ -21,7 +33,7 @@ const TransactionPage: React.FC = () => {
       {/* Heading with logo */}
       <div className="heading-with-logo">
         <img src="path-to-image" alt="Logo" className="heading-logo" />
-        <h1>Welcome to the Repayment Page</h1>
+        <h1>Welcome to the Token Page</h1>
       </div>
 
       {/* Content with logos, paragraphs, and integers */}
@@ -105,7 +117,8 @@ const TransactionPage: React.FC = () => {
     <div className="data-item">1234</div>
     <div className="data-item">$100</div>
     <div className="data-item">
-      <button style={{backgroundColor:'rgb(48, 53, 73)', borderRadius:'5px', color:'wheat', padding:'2px', marginRight:'1px'}}>Borrow</button>
+      <button style={{backgroundColor:'rgb(48, 53, 73)', borderRadius:'5px', color:'wheat', padding:'2px', marginRight:'1px'}} onClick={openPopup}>Borrow
+      <Popup isOpen={isPopupOpen} onRequestClose={closePopup} /></button>
       <button style={{backgroundColor: 'lightgrey', borderRadius:'5px', padding:'2px'}}>Details</button>
     </div>
     {/* ...more rows */}
@@ -116,4 +129,4 @@ const TransactionPage: React.FC = () => {
   );
 };
 
-export default TransactionPage;
+export default RepaymentPage;

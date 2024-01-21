@@ -1,4 +1,5 @@
 import React from 'react';
+import { ConnectKitButton } from 'connectkit';
 import './LoginPage.css'; 
 
 const LoginPage: React.FC = () => {
@@ -6,7 +7,7 @@ const LoginPage: React.FC = () => {
     <div className="login-container">
       <h1>Welcome to the Token Flex</h1>
       <p>Connect your wallet to start</p>
-      <button>Connect wallet</button>
+      <button><ConnectKitButton/></button>
     </div>
   );
 };
